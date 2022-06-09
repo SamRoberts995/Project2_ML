@@ -14,11 +14,13 @@ Data retrieved every minute price change from the 6th Jun 2022 to the present, w
 * resample collected dataframe into 1 minute averages
 #### Libraries Used:
 * Twitter Api
-* amount of data collected was not ideal
+    * amount of data collected was not ideal
 * Snscrape
-* can scrape an unlimited amount of tweets in reverse chronological order (got 75000 raw tweets)
+    * can scrape an unlimited amount of tweets in reverse chronological order (got 75000 raw tweets)
+* nltk
+* binance api
 - - -
-## Machine Learning Modle
+## Machine Learning Module
  - - -
   #### Random Forest Model
   - Uses ensemble learning method for regression. Ensemble learning method is a technique that combines predictions from multiple machine learning algorithms to make a more accurate prediction than a single model.
@@ -32,11 +34,19 @@ Data retrieved every minute price change from the 6th Jun 2022 to the present, w
   #### Support Vector Model
   - find a hyperplane in an N-dimensional space(N — the number of features) that distinctly classifies the data points. 
   - - -
+## How the bot generated the trade signals
+* The trading algorithm outputs a buy signal if:
+    * the price has gone down and the sentiment is positive
+    * the price has gone down and the majority of machine learning models say buy
+* Sell if:
+    * the price has gone up and the sentiment is negative
+    * the price has gone up and the majority of the models say sell
+* Machine learning models were imported into the bot code file using a library called pickle
 ## Discussion
 - - -
   - After several promising tests our bot starting throwing runtime errors 
 To show a proof of concept/minimum viable product we created an input/output interface to deliver exactly what the discord bot would have
 Basic algorithm can be applied to virtually anything including discord bots and sagemaker chatbots
-
+  - We also realised having 10 cryptocurrencies would require much more data and push our time constraints so our final product only gives signals for btc
 
 - - -
