@@ -8,15 +8,15 @@ Used the Binance Python package with the Klines function to gather the close pri
 Data retrieved every minute price change from the 6th Jun 2022 to the present, which gave us a sufficient data to train
   - - -
 ## Process
-*retrieve tweets from data source
-*clean tweets and determine their individual sentiment polarity score
-*remove stopwords, retweets and tweets with a sentiment score of 0.0000
-*resample collected dataframe into 1 minute averages
+* retrieve tweets from data source
+* clean tweets and determine their individual sentiment polarity score
+* remove stopwords, retweets and tweets with a sentiment score of 0.0000
+* resample collected dataframe into 1 minute averages
 #### Libraries Used:
-*Twitter Api
-*amount of data collected was not ideal
-*Snscrape
-*can scrape an unlimited amount of tweets in reverse chronological order (got 75000 raw tweets)
+* Twitter Api
+* amount of data collected was not ideal
+* Snscrape
+* can scrape an unlimited amount of tweets in reverse chronological order (got 75000 raw tweets)
 - - -
 ## Machine Learning Modle
  - - -
@@ -29,7 +29,7 @@ Data retrieved every minute price change from the 6th Jun 2022 to the present, w
   #### Logistic Regression Model
   - estimates the probability of an event occurring, such as voted or didn't vote, based on a given dataset of independent variables.
   - - -
-  ####Support Vector Model
+  #### Support Vector Model
   - find a hyperplane in an N-dimensional space(N — the number of features) that distinctly classifies the data points. 
   - - -
 ## Discussion
