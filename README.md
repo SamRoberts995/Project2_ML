@@ -1,40 +1,37 @@
-# Presentation Guidelines
+# Project 2 
 
-You are free to structure your presentations to your liking, but students tend to have success with the following format:
-
-* Title Slide
-
-  * Include the name of the project and group members.
-
-* Motivation & Summary Slide
-
-  * Define the core message, or hypothesis, of your project.
-
-* Model Summary
-
-  * Elaborate on the predictive model used, describing why it was the best choice for the data.
 
 * Data Cleanup & Model Training
 
-  * Describe the exploration and cleanup process.
-  * Discuss any problems that arose with preparing the data or training the model that you didn't anticipate.
-  * Discuss the overall training process and highlight anything of interest with the training process: Cloud resources used, training time required, issues with training.
+  * We focused on the prices of Bitcoin, Ethereum, Ripple, Binance coin, Solana, Cardano, Polygon, Sandbox, Decentraland, Algorand
+Used the Binance Python package with the Klines function to gather the close price for each coin and to convert the timestamp to DateTime format
+Data retrieved every minute price change from the 6th Jun 2022 to the present, which gave us a sufficient data to train
+  *Process:
+retrieve tweets from data source
+clean tweets and determine their individual sentiment polarity score
+remove stopwords, retweets and tweets with a sentiment score of 0.0000
+resample collected dataframe into 1 minute averages
+Libraries Used:
+Twitter Api
+amount of data collected was not ideal
+Snscrape
+can scrape an unlimited amount of tweets in reverse chronological order (got 75000 raw tweets)
 
-* Model Evaluation
+* Machine Learning Modle
 
-  * Discuss the techniques you used to evaluate the model performance.
-
+  * Random Forest Model - Uses ensemble learning method for regression. Ensemble learning method is a technique that combines predictions from multiple machine learning algorithms to make a more accurate prediction than a single model.
+  
+  *Native Bayes Model - set of supervised learning algorithms based on applying Bayes’ theorem with the “naive” assumption of conditional independence between every pair of features given the value of the class variable.
+  
+  *Logistic Regression Model - estimates the probability of an event occurring, such as voted or didn't vote, based on a given dataset of independent variables.
+  
+  *Support Vector Model - find a hyperplane in an N-dimensional space(N — the number of features) that distinctly classifies the data points. 
+  
 * Discussion
 
-  * Discuss your findings. Was the model sufficient for the predictive task? If not, why not? What inferences or general conclusions can you draw from your model performance?
+  * After several promising tests our bot starting throwing runtime errors 
+To show a proof of concept/minimum viable product we created an input/output interface to deliver exactly what the discord bot would have
+Basic algorithm can be applied to virtually anything including discord bots and sagemaker chatbots
 
-* Postmortem
-
-  * Discuss any difficulties that arose, and how you dealt with them.
-  * Discuss any additional questions or problems that you didn't have time to answer: What would you research next, if you had two more weeks?
-
-* Questions
-
-  * Open-floor Q&A with the audience.
 
 - - -
